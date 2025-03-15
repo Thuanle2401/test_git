@@ -1,0 +1,12 @@
+CREATE DATABASE IF NOT EXISTS order_db;
+USE order_db;
+
+DROP TABLE IF EXISTS orders;
+
+CREATE TABLE orders (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    customer_name VARCHAR(255) NOT NULL,
+    product VARCHAR(255) NOT NULL,
+    quantity INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
